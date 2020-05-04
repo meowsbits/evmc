@@ -211,6 +211,8 @@ jobs:
       - run:
           name: "Go Build"
           command: |
+            go env
+            gcc --version
             go get -v github.com/ethereum/go-ethereum/common
             go build -v ./bindings/go/evmc
             go vet -v ./bindings/go/evmc
