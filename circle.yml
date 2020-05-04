@@ -211,6 +211,10 @@ jobs:
       - run:
           name: "Go Build"
           command: |
+            echo CC: $CC
+            echo CXX: $CXX
+            $CC --version
+            $CXX --version
             go env
             gcc --version
             go get -v github.com/ethereum/go-ethereum/common
